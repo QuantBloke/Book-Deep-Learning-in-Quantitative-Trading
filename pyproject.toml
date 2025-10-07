@@ -1,0 +1,44 @@
+[project]
+name = "book-deep-learning-in-quantitative-trading"
+version = "0.1.0"
+description = "Deep Learning in Quantitative Trading - Code examples and implementations"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "matplotlib>=3.7.0",
+    "scipy>=1.10.0",
+    "torch>=2.0.0",
+    "scikit-learn>=1.3.0",
+    "yfinance>=0.2.0",
+    "statsmodels>=0.14.0",
+    "arch>=6.0.0",
+    "optuna>=3.0.0",
+    "ipykernel>=6.0.0",
+]
+
+[tool.uv]
+managed = true
+python-preference = "system"
+preview = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-select = ["I"]
+fix = true
+unsafe-fixes = false
+exclude = [".git", ".venv", "build", "dist", "__pycache__"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-wrap-aliases = true
+
+[tool.pyright]
+typeCheckingMode = "strict"
+include = ["src"]
+venvPath = "."
+venv = ".venv"
+reportMissingImports = true
+reportMissingTypeStubs = false
