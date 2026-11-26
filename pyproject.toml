@@ -3,7 +3,7 @@ name = "book-deep-learning-in-quantitative-trading"
 version = "0.1.0"
 description = "Deep Learning in Quantitative Trading - Code examples and implementations"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.12,<3.14"
 dependencies = [
     "numpy>=1.24.0",
     "pandas>=2.0.0",
@@ -16,6 +16,7 @@ dependencies = [
     "arch>=6.0.0",
     "optuna>=3.0.0",
     "ipykernel>=6.0.0",
+    "plotly>=6.5.2",
 ]
 
 [tool.uv]
