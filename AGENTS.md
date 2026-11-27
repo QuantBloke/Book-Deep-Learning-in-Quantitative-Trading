@@ -11,9 +11,8 @@ PDF and analysis notes.
 
 - Use `uv sync --locked` from the repository root. `pyproject.toml` and `uv.lock` define the
   environment. The Conda setup in `README.md` refers to an environment file absent from this checkout.
-- Use Python 3.13 for day-to-day work, as pinned in `.python-version`. Keep code compatible with
-  Python 3.12, the minimum in `requires-python` and the Ruff target. The declared range is
-  `>=3.12,<3.14`.
+- Use Python 3.13, as pinned in `.python-version`. It is also the `requires-python` range
+  (`>=3.13,<3.14`), the Ruff target, and the Pyright version.
 - In an existing Jupyter or IDE session, select the project's `.venv` kernel. To launch JupyterLab
   from the repository root, use `uv run --locked --with jupyterlab jupyter lab`. The project already
   includes `ipykernel`.
