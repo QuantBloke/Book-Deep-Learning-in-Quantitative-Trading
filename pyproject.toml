@@ -36,10 +36,20 @@ exclude = [".git", ".venv", "build", "dist", "__pycache__"]
 combine-as-imports = true
 force-wrap-aliases = true
 
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
 [tool.pyright]
+pythonVersion = "3.12"
 typeCheckingMode = "strict"
 include = ["src"]
 venvPath = "."
 venv = ".venv"
 reportMissingImports = true
 reportMissingTypeStubs = false
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]

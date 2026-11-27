@@ -44,6 +44,7 @@ PDF and analysis notes.
     --output-dir "$(mktemp -d)" 01_regression_classification.ipynb
   ```
 
+- Run the tests in `tests/` with `uv run --locked pytest` from the repository root.
 - For Python edits, follow the Ruff settings in `pyproject.toml`, including 100-character lines
   and import sorting. Run `uvx ruff check --no-fix` and `uvx ruff format --check` on the files you
   change.
